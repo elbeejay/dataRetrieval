@@ -64,8 +64,10 @@ jobs:
           git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
           git add R/\*
           git commit -m "Style code" || echo "No changes to commit"
-          git pull --ff-only
-          git push origin
+      - uses: r-lib/actions/pr-push@v2
+        with:
+	  repo-token: ${{ secrets.GITHUB_TOKEN }}
+
   # Next run lintr to annotate the PR with anything caught by the linter that wasn't changed by styler
   lint:
     runs-on: ubuntu-latest
