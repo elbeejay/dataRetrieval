@@ -15,3 +15,4 @@ sticker("./man/figures/highrezlogo-01.png",
         filename = "./man/figures/logo.png")
 # thing to commit
 x <- 5  # dummy code
+y = 10
