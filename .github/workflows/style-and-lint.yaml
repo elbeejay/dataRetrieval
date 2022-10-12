@@ -59,14 +59,12 @@ jobs:
         run: styler::style_pkg(filetype = c(".R", ".Rmd", ".Rmarkdown", ".Rnw"))
         shell: Rscript {0}
 
-      - name: Commit changes
-        run: |
+      - name: Commit and push changes
+      - run: |
           git config --local user.name "$GITHUB_ACTOR"
           git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
           git add R/\*
           git commit -m "Style code" || echo "No changes to commit"
-
-      - name: Push changes
       - uses: r-lib/actions/pr-push@v2
         with:
 	  repo-token: ${{ secrets.GITHUB_TOKEN }}
