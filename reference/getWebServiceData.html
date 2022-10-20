@@ -40,6 +40,7 @@ GET with more informative error messages."><meta property="og:image" content="/l
     <a class="dropdown-item" href="../articles/movingAverages.html">Moving Averages</a>
     <a class="dropdown-item" href="../articles/statsServiceMap.html">Stat Service</a>
     <a class="dropdown-item" href="../articles/nldi.html">NLDI Interface</a>
+    <a class="dropdown-item" href="../articles/wqp_large_pull_targets.html">Large Data Pull Example</a>
   </div>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
@@ -95,11 +96,11 @@ GET with more informative error messages."><meta property="og:image" content="/l
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">siteNumber</span> <span class="op">&lt;-</span> <span class="st">"02177000"</span></span></span>
 <span class="r-in"><span><span class="va">startDate</span> <span class="op">&lt;-</span> <span class="st">"2012-09-01"</span></span></span>
 <span class="r-in"><span><span class="va">endDate</span> <span class="op">&lt;-</span> <span class="st">"2012-10-01"</span></span></span>
-<span class="r-in"><span><span class="va">offering</span> <span class="op">&lt;-</span> <span class="st">'00003'</span></span></span>
-<span class="r-in"><span><span class="va">property</span> <span class="op">&lt;-</span> <span class="st">'00060'</span></span></span>
-<span class="r-in"><span><span class="va">obs_url</span> <span class="op">&lt;-</span> <span class="fu"><a href="constructNWISURL.html">constructNWISURL</a></span><span class="op">(</span><span class="va">siteNumber</span>,<span class="va">property</span>,<span class="va">startDate</span>,<span class="va">endDate</span>,<span class="st">'dv'</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">offering</span> <span class="op">&lt;-</span> <span class="st">"00003"</span></span></span>
+<span class="r-in"><span><span class="va">property</span> <span class="op">&lt;-</span> <span class="st">"00060"</span></span></span>
+<span class="r-in"><span><span class="va">obs_url</span> <span class="op">&lt;-</span> <span class="fu"><a href="constructNWISURL.html">constructNWISURL</a></span><span class="op">(</span><span class="va">siteNumber</span>, <span class="va">property</span>, <span class="va">startDate</span>, <span class="va">endDate</span>, <span class="st">"dv"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="co"># \donttest{</span></span></span>
-<span class="r-in"><span>  <span class="va">rawData</span> <span class="op">&lt;-</span> <span class="fu">getWebServiceData</span><span class="op">(</span><span class="va">obs_url</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">rawData</span> <span class="op">&lt;-</span> <span class="fu">getWebServiceData</span><span class="op">(</span><span class="va">obs_url</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
